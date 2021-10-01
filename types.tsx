@@ -18,6 +18,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
   Modal: undefined;
   NotFound: undefined;
+  NonAuth: undefined;
 };
 
 export type RootStackScreenProps<Screen extends keyof RootStackParamList> = NativeStackScreenProps<
@@ -42,4 +43,9 @@ export type HomeParamList = {
   PostDetail: {
     post: Post;
   }
+}
+
+export type NonAuthParamList = {
+  Login: undefined;
+  FogotPassword: undefined;
 }
